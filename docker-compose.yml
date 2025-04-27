@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+  backend:
+    restart: always
+    container_name: "backend"
+    command: python3 manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+      - "5678:5678"
+
+    build:
+      context: backend/
+      dockerfile: ci/Dockerfile
+
+    volumes:
+      - ./backend/db.sqlite3:/usr/src/app/db.sqlite3
