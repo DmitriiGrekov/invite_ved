@@ -15,3 +15,44 @@ services:
 
     volumes:
       - ./backend/db.sqlite3:/usr/src/app/db.sqlite3
+      - ./backend:/usr/src/app
+      - media:/usr/src/app/media
+      - ./persistentdata/static:/var/www/static # <--here
+      - ./persistentdata/media:/var/www/media
+  
+  frontend:
+      restart: always
+      build:
+        context: ./frontend/
+        dockerfile: ci/Dockerfile
+      command: 'serve -s build'
+      container_name: "frontend"
+      ports:
+        - 3000:3000
+
+      depends_on:
+        - backend
+  nginx:
+    restart: always
+    build:
+        context: ./nginx
+    ports:
+      - "80:80" # port exposed to outside world.
+      - "443:443"
+    volumes:
+      - media:/media
+      - ./persistentdata/certbot/conf:/etc/letsencrypt
+      - ./persistentdata/certbot/www:/var/www/certbot
+      - ./persistentdata/static:/var/www/static # <--here
+      - ./persistentdata/media:/var/www/media
+    depends_on:
+      - backend
+      - frontend
+  certbot:
+    image: certbot/certbot
+    entrypoint: "/bin/sh -c -v 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    volumes:
+      - ./persistentdata/certbot/conf:/etc/letsencrypt
+      - ./persistentdata/certbot/www:/var/www/certbot
+volumes:
+  media:

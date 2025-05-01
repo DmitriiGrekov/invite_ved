@@ -1,0 +1,15 @@
+.navBar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    z-index: 99;
+    height: 50px;
+    background-color: antiquewhite;
+    h3 {
+        margin-left: 50px;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: 'Cormorant Infant';
+    }
+}

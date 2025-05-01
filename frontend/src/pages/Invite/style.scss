@@ -1,0 +1,335 @@
+// .invite {
+//     background: rgba(206, 206, 206, 0.87);
+//     background-image:
+//         url("./img/imgbg2.png"),
+//         /* Левое изображение */
+//         url("./img/imgbg.png");
+//     /* Правое изображение */
+//     background-position:
+//         left 50%,
+//         /* Позиция левого */
+//         right 50%;
+//     /* Позиция правого */
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center;
+// }
+
+// .invite-content {
+//     font-family: 'Cormorant Infant';
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-evenly;
+//     border-radius: 50px;
+//     margin: 30px 0 30px 0;
+//     width: 45%;
+//     height: 95vh;
+//     background-color: #fff9f9;
+
+//     img {
+//         border-radius: 25px;
+//         max-width: 45%;
+//         height: auto;
+//     }
+
+//     p1 {
+//         margin: 20px 40px;
+//         font-size: 24px;
+//         font-weight: 500;
+//     }
+
+//     h2 {
+//         font-size: 30px;
+//         font-weight: bold;
+//         margin: 0;
+//     }
+
+//     h3 {
+//         font-family: "Marck Script", cursive;
+//         margin: 0;
+//         font-size: 35px;
+//         font-weight: 400;
+//     }
+// }
+
+// .invite-content-photo {
+//     display: flex;
+//     justify-content: space-evenly;
+
+//     img {}
+// }
+
+
+
+
+
+// @media (max-width: 1100px) {
+
+//     .invite-content {
+//         width: 65%;
+    
+//         p1 {
+//             margin: 10px 20px;
+//             font-size: 24px;
+//             font-weight: 500;
+//         }
+// }
+// }
+
+// @media (max-width: 700px) {
+
+//     .invite-content {
+//         width: 65%;
+
+//         .photo-1 {
+//             display: none;
+//         }
+//         .photo-2 {
+//             max-width: 75%;
+//             height: auto;
+//         }
+    
+//         p1 {
+//             margin: 10px 20px;
+//             font-size: 22px;
+//             font-weight: 500;
+//         }
+//         h2 {
+//             font-size: 26px;
+//             font-weight: bold;
+//             margin: 0;
+//         }
+    
+//         h3 {
+//             font-family: "Marck Script", cursive;
+//             margin: 0;
+//             font-size: 31px;
+//             font-weight: 400;
+//         }
+// }
+// }
+// @media (max-width: 576px) {
+//     .invite {
+       
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
+
+//     .invite-content {
+//         width: 65%;
+//         height: 82vh;
+
+//         display: flex;
+//         justify-content: center;
+//         p1 {
+//             margin: 10px 20px;
+//             font-size: 20px;
+//             font-weight: 500;
+//         }
+//         h2 {
+//             font-size: 24px;
+//             font-weight: bold;
+//             margin: 0;
+//         }
+    
+//         h3 {
+//             font-family: "Marck Script", cursive;
+//             margin: 0;
+//             font-size: 28px;
+//             font-weight: 400;
+//         }
+//     }
+// }
+
+
+.invite {
+    background: rgba(206, 206, 206, 0.87);
+    background-image: 
+        url("./img/imgbg2.png"),
+        url("./img/imgbg.png");
+    background-position: 
+        left center,
+        right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.invite-content {
+    font-family: 'Cormorant Infant';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 50px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    min-height: 90vh;
+    background-color: #fff9f9;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    img {
+        border-radius: 25px;
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    p1 {
+        margin: 15px 30px;
+        font-size: 22px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    h2 {
+        font-size: 28px;
+        font-weight: bold;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    h3 {
+        font-family: "Marck Script", cursive;
+        margin: 10px 0;
+        font-size: 32px;
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
+.invite-content-photo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    
+    img {
+        max-width: 45%;
+        margin: 10px;
+    }
+}
+
+/* Адаптация для планшетов и небольших ноутбуков */
+@media (max-width: 1024px) {
+    .invite {
+        background-size: 200px;
+    }
+    
+    .invite-content {
+        max-width: 90%;
+        min-height: auto;
+        padding: 30px 20px;
+        
+        p1 {
+            font-size: 20px;
+            margin: 15px 20px;
+        }
+        
+        h2 {
+            font-size: 26px;
+        }
+        
+        h3 {
+            font-size: 30px;
+        }
+    }
+}
+
+/* Адаптация для планшетов в портретной ориентации */
+@media (max-width: 768px) {
+    .invite {
+        background-image: none;
+    }
+    
+    .invite-content {
+        border-radius: 30px;
+        padding: 25px 15px;
+        
+        p1 {
+            font-size: 18px;
+            margin: 10px 15px;
+        }
+        
+        h2 {
+            font-size: 24px;
+        }
+        
+        h3 {
+            font-size: 28px;
+        }
+    }
+    
+    .invite-content-photo img {
+        max-width: 80%;
+        margin: 10px auto;
+    }
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 576px) {
+    .invite {
+        padding: 15px;
+    }
+    
+    .invite-content {
+        width: 95%;
+        border-radius: 20px;
+        padding: 20px 10px;
+        
+        p1 {
+            font-size: 16px;
+            margin: 8px 10px;
+            line-height: 1.4;
+        }
+        
+        h2 {
+            font-size: 22px;
+        }
+        
+        h3 {
+            font-size: 24px;
+        }
+    }
+    
+    .invite-content-photo {
+        flex-direction: column;
+        
+        img {
+            max-width: 100%;
+            margin: 5px 0;
+        }
+        
+        .photo-1 {
+            display: none;
+        }
+    }
+}
+
+/* Адаптация для очень маленьких устройств */
+@media (max-width: 400px) {
+    .invite-content {
+        p1 {
+            font-size: 15px;
+        }
+        
+        h2 {
+            font-size: 20px;
+        }
+        
+        h3 {
+            font-size: 22px;
+        }
+    }
+}
