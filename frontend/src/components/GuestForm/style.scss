@@ -1,6 +1,6 @@
 .guest-form-container {
     max-width: 600px;
-    margin: 0 auto 0;
+    margin: 0 auto 0px;
     padding: 20px;
     font-family: Arial, sans-serif;
 
@@ -10,6 +10,8 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
+    background-color: #fff9f9;
+
   }
   
   .guest-fields {

@@ -6,6 +6,7 @@ function Footer() {
     return (
         <div className='footer'>
             <div className='footer-content'>
+                <h2><a href='https://drive.google.com/drive/folders/1zkW44HjIpE2mJhRqj33Gn3TR5uwmXrj4?usp=drive_link' target="_blank">ФОТОАЛЬБОМ СО СВАДЬБЫ</a>  </h2>
                 <div style={{ position: 'relative', overflow: 'hidden', marginTop: '0' }}>
                     <a
                         href="https://yandex.ru/maps/org/la_cafe/200353738695/?utm_medium=mapframe&utm_source=maps"
